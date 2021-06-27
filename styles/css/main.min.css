@@ -1,5 +1,5 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize * */
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -199,10 +199,12 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 .wrapper {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 16px; }
+  margin: 0 67px;
+  padding: 67px; }
+  @media only screen and (max-width: 680px) {
+    .wrapper {
+      margin: 0 16px;
+      padding: 32px; } }
 
 section {
   display: -webkit-box; }
@@ -269,27 +271,27 @@ body {
   -webkit-tap-highlight-color: white; }
 
 .gigantic, .huge, .large, .bigger, .big,
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   color: White;
   letter-spacing: 10px;
   font-weight: bold;
-  font-family: 'Cinzel', serif;
-  font-weight: 600;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.01); }
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.01);
+  text-transform: uppercase;
+  letter-spacing: 0px; }
 
 .gigantic {
-  font-size: 110px;
+  font-size: 133px;
   line-height: 1.09;
   letter-spacing: -2px; }
 
 .huge, h1 {
   font-size: 96px;
-  line-height: 1.05;
-  text-transform: uppercase; }
+  line-height: 1.05; }
   @media only screen and (max-width: 680px) {
     .huge, h1 {
-      font-size: 44px;
-      letter-spacing: 10px; } }
+      font-size: 44px; } }
 
 .large, h2 {
   font-size: 42px;
@@ -316,9 +318,16 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 10px;
   line-height: 1.2; }
 
+.centered {
+  text-align: center; }
+
+.muted {
+  color: #515151; }
+
 p {
   margin: 0 0 20px 0;
-  font-weight: 400; }
+  font-weight: 400;
+  letter-spacing: 0; }
 
 em {
   font-style: italic; }
@@ -364,6 +373,21 @@ hr {
   width: 100%;
   left: 0; }
 
-.body {
-  color: red;
-  background-color: green; }
+.hero-img {
+  right: 0;
+  top: 0;
+  background-image: url("../../public/hero.jpg");
+  height: 1080px;
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -132px; }
+
+.flex-between {
+  display: flex;
+  justify-content: space-between; }
+
+.gr_38 {
+  margin-top: 380px;
+  width: 38%;
+  margin-left: auto; }
