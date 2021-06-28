@@ -2,14 +2,15 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import { GraphQLClient, gql } from 'graphql-request';
 import React from "react";
 
 export default function Home({cars}) {
 
-  React.useEffect(() => {
-    import("lottie-interactive/dist/lottie-interactive.js");
-  });
+    React.useEffect(() => {
+      import("lottie-interactive/dist/lottie-interactive.js");
+    });
   return (
     <div>
       <Head>
@@ -26,29 +27,41 @@ export default function Home({cars}) {
           </div>
         </div>
       </div>
+      <div>
+      <h1 className="centered muted">Welcome to the future</h1>
+      <div className="footer">
+        <lottie-interactive path="/Part2.lottie.json" interaction="play-on-show"/>
+        <p className="centered muted">hehe</p>
+        <h1 className="centered">The futureis here</h1>
+      </div>
+      <div className="footer">
+        <lottie-interactive path="/Part3.lottie.json" interaction="play-on-show"/>
+        <p className="centered muted">hehe</p>
+        <h1 className="centered">The future is here</h1>
+      </div>
 
-        <div>
-            <h1 className="centered muted">Welcome to the future</h1>
-                {cars.map((car) => (
-                  <Link href={`/cars/${car.slug}`} className="cta2">
-                  <a>
-                      <div key={car.id} className="car-card">
-                          <Image
-                          src={car.image.url}
-    //                      width={car.image.width}
-    //                      height={car.image.height}
-                          layout="fill" objectFit="cover"
-                          />
-                          <h2>{car.name}</h2>
-                          <p className="muted">Read more</p>
 
-                      </div>
-                    </a>
-                  </Link>
+              {cars.map((car) => (
+                <Link href={`/cars/${car.slug}`} className="cta2">
+                <a>
+                    <div key={car.id} className="car-card">
+                        <Image
+                        src={car.image.url}
+  //                      width={car.image.width}
+  //                      height={car.image.height}
+                        layout="fill" objectFit="cover"
+                        />
+                        <h2>{car.name}</h2>
+                        <p className="muted">Read more</p>
 
-                ))}
-              </div>
+                    </div>
+                  </a>
+                </Link>
+
+              ))}
             </div>
+            <Footer/>
+          </div>
           )
         }
 

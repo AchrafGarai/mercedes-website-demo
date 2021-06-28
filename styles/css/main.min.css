@@ -206,6 +206,10 @@ body {
       margin: 0 16px;
       padding: 32px; } }
 
+.w-sm {
+  max-width: 1160px;
+  margin: 0 auto; }
+
 section {
   display: -webkit-box; }
 
@@ -406,3 +410,7 @@ hr {
     position: absolute;
     top: 50%;
     left: 62%; }
+
+.footer {
+  padding: 134px 0;
+  text-align: center; }

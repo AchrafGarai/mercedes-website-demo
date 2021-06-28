@@ -1,6 +1,7 @@
 import { GraphQLClient } from 'graphql-request';
 import Image from 'next/image'
-
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
 
 const graphcms = new GraphQLClient(
   'https://api-eu-central-1.graphcms.com/v2/ckq9gk2z9w8gk01z1gkgr97d9/master'
@@ -54,13 +55,18 @@ export async function getStaticPaths() {
 
 export default({car}) =>(
   <div>
-    <h1>{car.name}</h1>
-    <p>{car.description}</p>
+    <Navbar></Navbar>
     <Image
     src={car.image.url}
     width={car.image.width}
     height={car.image.height}
     />
+    <div className="wrapper">
+      <h1>{car.name}</h1>
+      <p>{car.description}</p>
 
+    </div>
+
+    <Footer/>
   </div>
 );
