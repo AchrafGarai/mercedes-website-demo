@@ -27,20 +27,25 @@ export default function Home({cars}) {
         </div>
       </div>
 
-        <div className="wrapper">
+        <div>
             <h1 className="centered muted">Welcome to the future</h1>
                 {cars.map((car) => (
-                  <div key={car.id}>
-                      <Image
-                      src={car.image.url}
-                      width={car.image.width}
-                      height={car.image.height}
-                      />
-                      <h2>{car.name}</h2>
-                      <Link  href={`/cars/${car.slug}`}>
-                        <a>Read more</a>
-                      </Link>
-                  </div>
+                  <Link href={`/cars/${car.slug}`} className="cta2">
+                  <a>
+                      <div key={car.id} className="car-card">
+                          <Image
+                          src={car.image.url}
+    //                      width={car.image.width}
+    //                      height={car.image.height}
+                          layout="fill" objectFit="cover"
+                          />
+                          <h2>{car.name}</h2>
+                          <p className="muted">Read more</p>
+
+                      </div>
+                    </a>
+                  </Link>
+
                 ))}
               </div>
             </div>
