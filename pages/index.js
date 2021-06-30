@@ -30,14 +30,14 @@ export default function Home({cars}) {
       <div>
       <h1 className="centered muted">Welcome to the future</h1>
       <div className="footer">
-        <lottie-interactive path="/Part2.lottie.json" interaction="play-on-show"/>
-        <p className="centered muted">hehe</p>
-        <h1 className="centered">The futureis here</h1>
+        <lottie-interactive path="/Part2.lottie.json" interaction="play-on-show" width="1100px"/>
+        <p className="centered muted">Mercedes-Benz</p>
+        <h1 className="centered">Discover Mercedes.</h1>
       </div>
       <div className="footer">
         <lottie-interactive path="/Part3.lottie.json" interaction="play-on-show"/>
-        <p className="centered muted">hehe</p>
-        <h1 className="centered">The future is here</h1>
+        <p className="centered muted">The future is here</p>
+        <h1 className="centered">Crafted to inspire. </h1>
       </div>
 
 

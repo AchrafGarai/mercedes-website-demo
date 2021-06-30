@@ -13,12 +13,21 @@ export async function getStaticProps({ params }) {
     query cars($slug: String!) {
       car(where: { slug: $slug }) {
         name
-        description
-        image{
-          url
-          width
-          height
-        }
+       description
+       price
+       acceleration
+       power
+       slug
+       image {
+         url
+         width
+         height
+       }
+       secondaryPicture {
+         url
+         width
+         height
+       }
       }
     }
   `,
@@ -56,14 +65,42 @@ export async function getStaticPaths() {
 export default({car}) =>(
   <div>
     <Navbar></Navbar>
-    <Image
-    src={car.image.url}
-    width={car.image.width}
-    height={car.image.height}
-    />
+    <div className="car-card" >
+      <Image
+      layout="fill"
+      objectFit="cover"
+      src={car.image.url}
+      //width={car.image.width}
+      //height={car.image.height}
+      />
+    </div>
+
     <div className="wrapper">
-      <h1>{car.name}</h1>
-      <p>{car.description}</p>
+      <div className="flex-h">
+          <div>
+              <h1>{car.name}</h1>
+              <p className="muted">{car.description}</p>
+              <div className="mg-x-64">
+                <p className="muted">Price</p>
+                <h2>${car.price}</h2>
+
+                <p className="muted">Acceleration, 0-60 mph</p>
+                <h2>{car.acceleration} SEC</h2>
+
+                <p className="muted">Power</p>
+                <h2>{car.power} HP</h2>
+              </div>
+
+            </div>
+          <div>
+          <Image
+            src={car.secondaryPicture.url}
+            width={car.secondaryPicture.width}
+            height={car.secondaryPicture.height}
+            >
+            </Image>
+          </div>
+      </div>
 
     </div>
 

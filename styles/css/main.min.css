@@ -289,6 +289,10 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 133px;
   line-height: 1.09;
   letter-spacing: -2px; }
+  @media only screen and (max-width: 680px) {
+    .gigantic {
+      font-size: 90px;
+      margin: 1.2em 0; } }
 
 .huge, h1 {
   font-size: 96px;
@@ -386,20 +390,29 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -132px; }
+  @media only screen and (max-width: 680px) {
+    .hero-img {
+      height: 600px; } }
 
 .flex-between {
   display: flex;
   justify-content: space-between; }
 
 .gr_38 {
-  margin-top: 380px;
+  margin-top: 320px;
   width: 38%;
   margin-left: auto; }
+  @media only screen and (max-width: 680px) {
+    .gr_38 {
+      margin-top: 160px; } }
 
 .car-card {
   position: relative;
   height: 600px;
   transition: all 800ms ease; }
+  @media only screen and (max-width: 680px) {
+    .car-card {
+      height: 400px; } }
   .car-card:hover h2 {
     transition: all 800ms ease;
     letter-spacing: 1px; }
@@ -414,3 +427,12 @@ hr {
 .footer {
   padding: 134px 0;
   text-align: center; }
+
+.flex-h {
+  display: flex; }
+  @media only screen and (max-width: 920px) {
+    .flex-h {
+      display: block; } }
+
+.mg-x-64 {
+  margin: 64px 0; }
