@@ -1,6 +1,7 @@
 import { GraphQLClient } from 'graphql-request';
 import Image from 'next/image'
 import Head from 'next/head'
+import { LottieInteractive } from 'lottie-interactive'
 
 const graphcms = new GraphQLClient(
   'https://api-eu-central-1.graphcms.com/v2/ckq9gk2z9w8gk01z1gkgr97d9/master'

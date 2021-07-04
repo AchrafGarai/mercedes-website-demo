@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { GraphQLClient, gql } from 'graphql-request';
-import react from "react";
+import react from 'react';
 
 export default function Home({cars}) {
 
