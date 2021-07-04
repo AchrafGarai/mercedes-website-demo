@@ -64,7 +64,7 @@ export async function getStaticPaths() {
 }
 
 
-export default function Car({car}){
+export default function CarDetails({car}){
   return(
     <div>
     <Head>
@@ -111,5 +111,5 @@ export default function Car({car}){
 
       </div>
     </div>
-  );
+  )
 }
