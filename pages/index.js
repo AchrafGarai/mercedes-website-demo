@@ -2,11 +2,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { GraphQLClient, gql } from 'graphql-request';
-import React from "react";
+import react from "react";
 
 export default function Home({cars}) {
 
-    React.useEffect(() => {
+    react.useEffect(() => {
       import("lottie-interactive/dist/lottie-interactive.js");
     });
   return (
