@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Navbar() {
+function Navbar() {
 
   return (
     <div className="wrapper">
@@ -16,3 +16,4 @@ export default function Navbar() {
     </div>
   )
 }
+export default Navbar;

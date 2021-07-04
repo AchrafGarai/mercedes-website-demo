@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export default function Footer() {
+function Footer() {
 
   return (
     <div className="wrapper">
@@ -12,3 +12,4 @@ export default function Footer() {
     </div>
   )
 }
+export default Footer;
