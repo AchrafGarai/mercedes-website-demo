@@ -1,0 +1,25 @@
+.car-card
+  position: relative
+  height: 600px
+  transition: all 800ms ease
+  @media only screen and (max-width: 680px)
+    height: 400px
+  &:hover
+    h2
+      transition: all 800ms ease
+      letter-spacing: 1px
+    img
+      transition: all 800ms ease
+      transform: scale(1.05)
+  h2,p
+    position: absolute
+    top: 50%
+    left: 62%
+    @media only screen and (max-width: 680px)
+      top: 35%
+      left: 50%
+
+
+.footer
+  padding: 134px 0
+  text-align: center

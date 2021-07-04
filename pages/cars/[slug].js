@@ -1,12 +1,11 @@
 import { GraphQLClient } from 'graphql-request';
 import Image from 'next/image'
-import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
 
 const graphcms = new GraphQLClient(
   'https://api-eu-central-1.graphcms.com/v2/ckq9gk2z9w8gk01z1gkgr97d9/master'
 );
 
+{/* Main page content */}
 export async function getStaticProps({ params }) {
   const { car } = await graphcms.request(
     `
@@ -64,7 +63,6 @@ export async function getStaticPaths() {
 
 export default({car}) =>(
   <div>
-    <Navbar></Navbar>
     <div className="car-card" >
       <Image
       layout="fill"
@@ -77,7 +75,7 @@ export default({car}) =>(
 
     <div className="wrapper">
       <div className="flex-h">
-          <div>
+          <div className="flex-2-fr">
               <h1>{car.name}</h1>
               <p className="muted">{car.description}</p>
               <div className="mg-x-64">
@@ -92,7 +90,7 @@ export default({car}) =>(
               </div>
 
             </div>
-          <div>
+          <div className="flex-1-fr">
           <Image
             src={car.secondaryPicture.url}
             width={car.secondaryPicture.width}
@@ -103,7 +101,5 @@ export default({car}) =>(
       </div>
 
     </div>
-
-    <Footer/>
   </div>
 );
