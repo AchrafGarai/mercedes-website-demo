@@ -2,13 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { GraphQLClient, gql } from 'graphql-request';
-import react from 'react';
+import { useEffect } from 'react'
 
 export default function Home({cars}) {
+  useEffect(() => {
+    import("lottie-interactive/dist/lottie-interactive.js");
+    }, []);
 
-    react.useEffect(() => {
-      import("lottie-interactive/dist/lottie-interactive.js");
-    });
   return (
     <div>
      {/* We the head componenent take our meta data like page title, favicon .... */}
