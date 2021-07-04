@@ -65,7 +65,7 @@ export async function getStaticPaths() {
 
 
 export default function CarDetails({car}){
-  return(
+  return (
     <div>
     <Head>
       <title>{car.name}</title>
