@@ -41,9 +41,9 @@ export default function Home({cars}) {
 
               {/* Looping through static props generating from GetStaticProps method */}
               {cars.map((car) => (
-                <Link href={`/cars/${car.slug}`} className="cta2">
+                <Link key={car.id} href={`/cars/${car.slug}`} className="cta2">
                 <a>
-                    <div key={car.id} className="car-card">
+                    <div  className="car-card">
                         <Image
                         src={car.image.url}
                         layout="fill" objectFit="cover"
