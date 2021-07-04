@@ -3,11 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { GraphQLClient, gql } from 'graphql-request';
 import { useEffect } from 'react'
-useEffect(() => {
-  import("lottie-interactive/dist/lottie-interactive.js");
-  }, []);
 
 export default function Home({cars}) {
+  useEffect(() => {
+    import("lottie-interactive/dist/lottie-interactive.js");
+    }, []);
 
   return (
     <div>
